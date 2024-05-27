@@ -1,0 +1,49 @@
+Since $A = P$ and
+\begin{align*}
+    S &= PDP^{-1}\\
+    &=  \begin{bmatrix}
+        1&0&0&0\\
+        0&1&0&0\\
+        0&0&\frac{i\sqrt{2}}{2} & - \frac{i\sqrt{2}}{2} \\
+        0&0&1&1
+        \end{bmatrix} \begin{bmatrix}
+        2 &0&0&0\\
+        0&2&0&0\\
+        0&0&2 + i \sqrt{2}&0\\
+        0&0&0&2 - i \sqrt{2}
+    \end{bmatrix}
+    \begin{bmatrix}
+        1&0&0&0\\
+        0&1&0&0\\
+        0&0&-\frac{i\sqrt{2}}{2} & \frac{1}{2}\\
+        0&0&\frac{i\sqrt{2}}{2}&\frac{1}{2}
+        \end{bmatrix}\\
+        &= \begin{bmatrix}
+            2&0&&\\
+            0&2&&\\
+            &&2&-2\\
+            &&2&2
+        \end{bmatrix}
+\end{align*}
+Then $N = A-S = \begin{bmatrix}
+    0&1&0&0\\
+    &0&0&0\\
+    &&0&0\\
+    &&&0
+\end{bmatrix}$ which is clearly nilpotent of degree 2. Then $e^{At} = e^{(S+N)t} = e^{St}.e^{Nt}$. By the exponential definition we know $e^{Nt} = I + Nt + 0 +  \dots = \begin{bmatrix}
+    1&t&0&0\\
+    &1&0&0\\
+    &&1&0\\
+    &&&1
+\end{bmatrix}$. Then reverse-engineering the notes, $e^{St} = \begin{bmatrix}
+    e^{2t} & 0 & & \\
+    0&e^{2t}&&\\
+    &&e^{2t} \cos(2t) & -e^{2t}\sin(2t)\\
+    &&e^{2t}\sin(2t) & e^{2t} \cos(2t) 
+\end{bmatrix}$. Lastly $e^{At} = e^{St}.e^{Nt} = e^{Nt}.e^{St}$ which is 
+$$e^{At} =  \begin{bmatrix}
+    e^{2t} & te^{2t} & & \\
+    0&e^{2t}&&\\
+    &&e^{2t} \cos(2t) & -e^{2t}\sin(2t)\\
+    &&e^{2t}\sin(2t) & e^{2t} \cos(2t) 
+\end{bmatrix}$$

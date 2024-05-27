@@ -1,0 +1,16 @@
+Verify that $\{e^t, e^{-1}, e^{-2t}\}$ for a fundamental set of solutions to the ODE $y''' + 2y'' - y' - 2y = 0$. That is, (i) show each solve the ODE and (ii) the functions are linearly independent.
+
+
+
+\begin{enumerate}[label=(\roman*)]
+    \item .
+    \item Let $y_1 := e^t$, $y_2 := e^{-t}$, and $y_3 := e^{-2t}$. Then
+    $$y_1' = y_1'' = e^t \wideand y_2' = -e{-t}, \; y_2'' = e^{-t} \wideand y_3' = -2e^{-2t}, y_3'' = 4e^{-2t}$$ Then \begin{align*}
+        W(y_1, y_2, y_3) &= {\begin{vmatrix}
+            e^t & e^{-t} & e^{-2t} \\
+            e^t & -e{-t} & -2e^{-2t} \\
+            e^t & e^{-t} & 4e^{-2t}
+        \end{vmatrix}}\\
+        &= -6e^{-2t} \neq 0
+    \end{align*}
+\end{enumerate}

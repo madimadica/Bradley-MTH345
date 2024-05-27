@@ -1,0 +1,15 @@
+To find $e^At$ we will use $e^{At} = e^{(S+N)t}$ with $S = PDP^{-1}$ and where $D$ is a diagonal matrix of eigenvalues from $A$. Since $D = 0_{4,4}$, then $S = 0$. Therefore $N = A-S =  A$. It follows that $e^{At} = e^{Nt}$ where $N \equiv A$ is nilpotent of degree 3. Thus
+\begin{align*}
+    e^{At} &= I + tA + \frac{t^2}{2}A^2 + 0 + \dots\\
+    &= I + t\begin{bmatrix}
+        0&0&0&0 \\ 1&0&0&1 \\ 1&0&0&1 \\ 0&-1&1&0
+    \end{bmatrix} + \frac{t^2}{2}\begin{bmatrix}
+        0&0&0&0 \\ 0&-1&1&0 \\ 0&-1&1&0 \\ 0&0&0&0
+    \end{bmatrix}\\
+    &= \begin{bmatrix}
+        1 & 0 & 0 & 0 \\
+        t & \pars{1 - \frac{t^2}{2}} & \frac{t^2}{2} & t \\
+        t & -\frac{t^2}{2} & \pars{\frac{t^2}{2} + 1} & t \\
+        0 & -t & t &1
+    \end{bmatrix}
+\end{align*}

@@ -1,0 +1,20 @@
+Show that the ODE is a separable equation and find the general solution. Justify that this is the same solution found before.
+
+\nnl Rewriting it with leibniz notation and then simplifying,
+\begin{align*}
+     & \quad (1+y^2)\dd x + 2(x+1)y\; \dd y = 0\\
+    \iff & \quad (1+y^2)\dd x = -2(x+1)y\; \dd y\\
+    \iff & \quad \frac{1}{-2(x+1)}\dd x = \frac{y}{1+y^2} \dd y\\
+    \iff & \quad \int \frac{1}{-2(x+1)}\dd x = \int \frac{y}{1+y^2} \dd y \tag{let $u_1 = x+1, \; u_2 = 1+y^2$}\\
+    \iff & \quad \frac{-1}{2} \int \frac{\dd u_1}{u_1} = \frac{1}{2} \int \frac{\dd u_2}{u_2}\\
+    \iff & \quad \frac{-1}{2} \ln \abs{u_1} = \frac{1}{2} \ln \abs{u_2} + C_1 \\
+    \iff & \quad \frac{-1}{2} \ln \abs{x+1} = \frac{1}{2} \ln \abs{1+y^2} + C_1\\
+    \iff & \quad e^{\frac{-1}{2} \ln \abs{x+1}} = e^{\frac{1}{2} \ln \abs{1+y^2} + C_1}\\
+    \iff & \quad e^{\ln \abs{(x+1)^{-0.5}}}  = e^{\ln \abs{(1+y^2)^{0.5}}} e^{C_1}\\
+    \iff & \quad (x+1)^{-0.5}  = C_2 (1+y^2)^{0.5}\\
+    \iff & \quad \frac{1}{\sqrt{x+1}} = C_2 \sqrt{1+y^2}\\
+    \iff & \quad \sqrt{1+y^2} \sqrt{x+1} = \frac{1}{C_2}\\
+    \iff & \quad (1+y^2)(x+1) = \frac{1}{C_2^2}\\
+    \iff & \quad y^2 + xy^2 + x = C\\
+\end{align*}
+Which is the same as before, $f(x,y) = y^2 + xy^2 + x = C$

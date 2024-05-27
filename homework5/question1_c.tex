@@ -1,0 +1,18 @@
+$y''' + 4y' = t + \cos t + e^{-2t}$
+
+\soln Factoring yields $D(D^2+4)$ so the fundemental set for $y_c$ is $\{1, \sin (2t), \cos(2t)\}$. For constructing an annihilator, $t$ implies $D^2$, $\cos t$ implies $D^2+1$, and $e^{-2t}$ implies $D+2$. Hence $A = D^2(D^2 + 1)(D+2)$ and $D^3(D^2+4)(D^2 + 1)(D+2) = 0$. So the fundemental set for $y_a$ is $$\{ 1, t, t^2, \sin 2t, \cos 2t, \sin t, \cos t, e^{-2t}\}.$$
+Differentiating $y_p$,
+\begin{align*}
+    y_p &= d_1 t + d_2 t^2 + d_3 \sin t + d_4 \cos t + d_5 e^{-2t}\\
+    y_p' &= 2 d_2 t + d_3 \cos t - d_4 \sin t - 2 d_5 e^{-2t}\\
+    y_p'' &= 2d_2 - d_3 \sin t - d_4 \cos t + 4 d_5 e^{-2t}\\
+    y_p''' &= -d_3 \cos t + d_4 \sin t - 8 d_5 e^{-2t}
+\end{align*}
+Then 
+\begin{align*}
+    y''' + 4y' &= t + \cos t + e^{-2t}\\
+    \Bigbrac{ -d_3 \cos t + d_4 \sin t - 8 d_5 e^{-2t} } + 4 \Bigbrac{ 2 d_2 t + d_3 \cos t - d_4 \sin t - 2 d_5 e^{-2t} } &=  t + \cos t + e^{-2t}\\
+    8d_2t + 3d_3 \cos t - 3 d_4 \sin t - 16 d_5 e^{-2t}&=  t + \cos t + e^{-2t}
+\end{align*}
+Therefore $d_1 = 0, \; d_2 = \frac18, \; d_3 = \frac13, \; d_4 = 0, \; d_5 = -\frac{1}{16}$ and hence the general solution is 
+$$y(t) = c_1 + c_2 \sin (2t) + c_3 \cos (2t) + \frac18 t^2 + \frac13 \sin t - \frac{1}{16} e^{-2t}$$

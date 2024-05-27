@@ -1,0 +1,36 @@
+If $m$ is a positive constant, find the solution of the initial value problem
+$$y''' - my'' + m^2 y' - m^3 y = 0$$
+where $f(0) = f'(0) = 0, \; f''(0) = 1.$
+
+\soln Begin by factoring the cubic. \begin{align*}
+  &D^3 - mD^2 + m^2 D - m^3 = 0\\
+  &D^2(D-m) + m^2(D-m) = 0\\
+  &(D-m)(D^2 + m^2) = 0\\
+  &\underbrace{(D-m)}_{e^{mx}} \underbrace{(D+im)(D-im)}_{\cos(mx),\quad \sin(mx)} = 0
+\end{align*}
+We can now write the general solution to the ODE and differentiate twice.
+\begin{align*}
+  y(x) &= c_1 e^{mx} + c_2 \cos (mx) + c_3 \sin (mx)\\
+  y'(x) &= m \brac{ c_1 e^{mx} - c_2 \sin (mx) + c_3 \cos(mx)}\\
+  y''(x) &= m^2 \brac{ c_1 e^{mx} - c_2 \cos (mx) - c_3 \sin (mx)}
+ \end{align*}
+
+ Evaluating these functions at the initial conditions results in the following system of equations
+  \begin{align*}
+    y(0) &= c_1 + c_2 = 0\\
+    y'(0) &= mc_1 + mc_3 = 0\\
+    y''(0) &= m^2  c_1 - m^2 c_2 = 1
+   \end{align*}
+   $$\begin{bmatrix}
+    1 & 1 & 0 & \bigm| & 0 \\
+    m & 0 & m & \bigm| & 0 \\
+    m^2 & -m^2 & 0 & \bigm| & 1
+  \end{bmatrix} \xRightarrow{\text{RREF}} \begin{bmatrix}
+    1 & 0 & 0 & \bigm| & 0.5m^{-2} \\
+    0 & 1 & 0 & \bigm| & -0.5m^{-2}   \\
+    0 & 0 & 1 & \bigm| & -0.5m^{-2}  
+  \end{bmatrix}$$
+
+  Thus $c_1 = \dfrac{1}{2m^2}$, $c_2 = \dfrac{-1}{2m^2}$, and $c_3 = \dfrac{-1}{2m^2}$. It follows that the solution to the initial value problem is  
+  $$\boxed{$$y(x) = \dfrac{1}{2m^2} \Bigbrac{ e^{mx} - \cos(mx) - \sin(mx)}
+.$$}$$

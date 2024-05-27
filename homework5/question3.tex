@@ -1,0 +1,15 @@
+Convert the given IVP to its equivalent first-order linear initial value system. 
+$$y^{(4)} + 2y'' + y = 3 \sin t - 5 \cos t, \quad y(0) = y'(0) = 0, \quad y''(0) = y'''(0) = 1.$$
+
+\soln We make the following substitutions: 
+$$y_1 = y \qquad y_1' = y_2 \qquad y_2' = y_3 \qquad y_3' = y_4 \qquad y_4' = -2y_3 -y_1$$
+And then we create the following linear system:
+$$\dot{\begin{bmatrix}
+    y_1 \\ y_2 \\ y_3 \\ y_4
+\end{bmatrix}} = \begin{bmatrix}
+    0 & 1 & 0 & 0 \\ 0&0&1&0 \\ 0&0&0&1 \\ -1&0&-2&0
+\end{bmatrix} \begin{bmatrix}
+    y_1 \\ y_2 \\ y_3 \\ y_4
+\end{bmatrix} + \begin{bmatrix}
+    0 \\ 0 \\ 0 \\ 3\sin t - 5 \cos t
+\end{bmatrix}$$

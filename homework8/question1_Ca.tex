@@ -1,0 +1,20 @@
+The characteristic polynomial is $\lambda^4 -8\lambda^3 + 26 \lambda^2 - 40\lambda + 24 = 0$, which has roots $2 \pm i \sqrt{2}$ and $2$ with multiplicity 2. Let $\lambda_1 = 2 + i\sqrt{2}, \; \lambda_2 = 2 - i\sqrt{2}$ and $\lambda_3 = \lambda_4 = 2$. 
+
+$$(A-\lambda_1I)v_1 = 0 \implies \begin{bmatrix}
+    -i\sqrt{2}&1&0&0 \\
+    0&-i\sqrt{2}&0&0 \\
+    0&0&-i\sqrt{2}&-1 \\
+    0&0&2&-i\sqrt{2}
+\end{bmatrix}v_1 = 0 \xRightarrow{\text{RREF}} \begin{bmatrix}
+    1&0&0&0 & \bigm| & 0 \\
+    0&1&0&0 & \bigm| & 0 \\
+    0&0&1&-\frac{i\sqrt{2}}{2} & \bigm| & 0 \\
+    0&0&0&0 & \bigm| & 0 
+\end{bmatrix} $$
+thus $x_3 = \frac{i\sqrt{2}}{2}x_4$. Letting $x_4 = 1$ then we get $v_1 = \vvec{0}{0}{\frac{i\sqrt{2}}{2}}{1}$ and conjugate $v_2 = \vvec{0}{0}{\frac{-i\sqrt{2}}{2}}{1}$.
+
+For $\lambda_3$ and $\lambda_4$, $\;(A-2I)$ row reduces to $\begin{bmatrix}
+    0 & 1 & 0 & 0 \\ 0&0&1&0 \\ 0&0&0&1 \\ 0&0&0&0
+\end{bmatrix}$. Thus the only free variable is $x_1$, so we can let $v_3 = e_1$. We then need to use $(A-2I)^2$ for the last generalized eigenvector. This is a diagonal matrix and it row reduces to $\begin{bmatrix}
+    0 & 0 & 1 & 0 \\ 0&0&0&1 \\ 0&0&0&0 \\ 0&0&0&0
+\end{bmatrix}$. Thus $x_1$ and $x_2$ are free variables, but since $e_1 \equiv v_3$ (already in the span), we can instead use $v_4 = e_2$.

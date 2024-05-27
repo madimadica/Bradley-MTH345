@@ -1,0 +1,14 @@
+Show that $x''(t) = f(t,x(t)), \quad x(t_0) = x_0, \quad x'(t_0) = x_1$ is equivalent to $x(t) = x_0 + x_1(t-t_0) + \int_{t_0}^t (t-s)f(s, x(s)) \dd s$. (Hint: Consider changing the order of integration of your resultant double integral)
+
+\begin{align*}
+  x'(t) &= x'(t_0) + \int_{t_0}^t f(s, x(s)) \dd s\\
+  x'(t) &= x_1 + \int_{t_0}^t f(s, x(s)) \dd s\\
+\end{align*}
+Then
+\begin{align*}
+  x(t) &= x(t_0) + \int_{t_0}^t \biggbrac{ x_1 + \int_{t_0}^t f(s, x(s)) \dd s } \dd s\\
+  x(t) &= x_0 + \int_{t_0}^t x_1 \dd s + \int_{t_0}^t \biggbrac{ \int_{t_0}^t f(s, x(s)) \dd s } \dd s\\
+  x(t) &= x_0 + x_1 s \big|_{t_0}^{t} + \int_{t_0}^t \biggbrac{ \int_{t_0}^t f(s, x(s)) \dd s } \dd s\\
+  x(t) &= x_0 + x_1 \cdot t - x_1 \cdot t_0 + \int_{t_0}^t \biggbrac{ \int_{t_0}^t f(s, x(s)) \dd s } \dd s\\
+  x(t) &= x_0 + x_1(t-t_0) + \int_{t_0}^t \biggbrac{ \int_{t_0}^t f(s, x(s)) \dd s } \dd s\\
+\end{align*}

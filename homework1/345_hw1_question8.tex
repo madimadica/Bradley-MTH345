@@ -1,0 +1,16 @@
+Prove the following proposition
+
+\noindent \textbf{Prop:} Let $\displaystyle \dv{y}{x} = f(x,y)$ be such that $f(x,y)$ is a homogeneous function of degree 0. Then, through the substitution $u = y/x$, the ODE converts to a separable ODE of the form $$\dv{u}{x} = \over{x} \brac{f(1,u) - u}.$$
+(Hint: Differentiate the substitution $u = y/x$ or $y = ux$.)
+
+\begin{proof}
+    Using the previous proposition with our hypothesis of degree 0 means that $f(x,y) = f(1,u)$, we will use this substitution later. Let $y = ux$. Differentiating both sides yields $\dd y = x \dd u + u \dd x$ by the product rule. Returning to our original $f(x,y)$ and substituting $\dd y$ with the former gives the desired result.
+    \begin{align*}
+        &\dv{y}{x} = f(x,y) \tag{ODE assumption}\\
+        &\frac{x \dd u + u \dd x}{ \dd x} = f(x,y) \tag{substitution of $\dd y$}\\
+        &\dv{u}{x}\cdot x + u = f(x,y) \tag{simplify fraction}\\
+        &\dv{u}{x}\cdot x = f(x,y) - u \tag{subtract $u$}\\
+        &\dv{u}{x} = \frac{1}{x} \brac{f(x,y) - u} \tag{divide by $x$} \\
+        &\dv{u}{x} = \frac{1}{x} \brac{f(1,u) - u} \tag{substitution with previous proposition}
+    \end{align*}
+\end{proof}

@@ -1,0 +1,11 @@
+Verify that $\{x, x^2, 1/x\}$ form a fundamental set to the corresponding complementary ODE. 
+
+\soln Let $y_1 := x$, $y_2 := x^2$, and $y_3 := 1/x$. Computing the Wronskian,
+\begin{align*}
+    W(y_1, y_2, y_3) &= \dety{x}{x^2}{x^{-1}}{1}{2x}{-x^{-2}}{0}{2}{2x^{-3}}\\
+    &= x \detx{2x}{-x^{-2}}{2}{2x^{-3}} - x^2 \detx{1}{-x^{-2}}{0}{2x^{-3}} + x^{-1} \detx {1}{2x}{0}{2}\\
+    &= 6/x - 2/x + 2/x\\
+    &= 6/x
+\end{align*}
+Since the Wronskian is not zero, the set is linearly independent and 3 vectors in a third-order ODE span $\ker L$, thus forming a basis.
+

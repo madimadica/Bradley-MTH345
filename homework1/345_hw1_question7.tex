@@ -1,0 +1,11 @@
+Prove the following proposition
+
+\noindent \textbf{Prop:} If $f(x,y)$ is a homogeneous function of degree 0, it can always be expressed as $G(y/x)$ where $G(t)$ is a scalar function of one-variable.
+
+\noindent (Hint: When $x \neq 0,\; f(x,y) = (1/x)^0 f(x,y).$)
+
+\begin{proof}
+    For $x \neq 0$, let $\alpha = 1/x$. Then by our assumptions $$f(x,y) = \alpha^0 f(x,y)  = f(\alpha x, \alpha y) = f \pars{\frac{x}{x}, \frac{y}{x}} = f \pars{1, \frac{y}{x}}.$$ Since the first parameter of $f$ is constant we can define a scalar function $G(t)$ using only the second parameter $t = \dfrac{y}{x}$. Then $G(t) = G(y/x) = f(x,y)$.
+
+    \nl For $x = 0$, $G(y/x)$ would be undefined, but $f(x,y) = f(0, y)$ which is a function of just $y$, so $G(t)$ works with $y = t$.
+\end{proof}

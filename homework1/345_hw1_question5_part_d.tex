@@ -1,0 +1,16 @@
+Find the general solution to the original ODE.
+
+\nl Using the $M$ and $N$ from part (c), integrating for $\int M \dd x$ and $\int N \dd y$ gives
+\begin{align*}
+    \int M \dd x && \int N \dd y \\
+    \int -2xy^{-3} \dd x && \int 3x^2 y^{-4} - y^{-2} \dd y\\
+    -x^2 y^{-3} + C(y) && -x^2y^{-3} + y^{-1} + C(x).
+\end{align*}
+Therefore $C(y) = y^{-1} + C$ and $C(x) = 0$. Hence, $f(x,y) = -x^2y^{-3} + y^{-1} + C$.
+This solution can be verified as follows,
+\begin{align*}
+    & \dv{x} \Bigbrac{ -x^2y^{-3} + y^{-1} = -C} \\
+    & 3x^2y^{-4}y' - 2xy^{-3} -y^{-2}y' = 0\\
+    & y' = \frac{2xy^{-3}}{3x^2y^{-4}-y^{-2}}\\
+    & y' = \frac{2xy^2}{3x-y^2} = \dv{y}{x}\\
+\end{align*}

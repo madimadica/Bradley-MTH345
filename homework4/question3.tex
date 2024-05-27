@@ -1,0 +1,16 @@
+Find a linear differential equation $Ly = 0$ with constant coefficients where $y_1(x) = e^{-2x}\cos (3x)$, $y_2(x) = x^2$, and $y_3(x) = x \sin x$ are solutions. 
+
+\soln $y_1$ implies that $e^{-2x} \sin (3x)$ is also in $\ker L$. $y_2$ implies that $\operatorname{span}\{1, x\} \in \ker L$. Lastly, $y_3$ implies that $\operatorname{span}\{\sin x, \cos x, x \cos x\} \in \ker L$. Then we can combine the operators from the kernel and still remain in the kernel.
+
+\nl For $y_1$ we have $(D+(2+3i)I)(D+(2-3i)I) = D^2 + 4D + 13I$, $y_2$ has $D^3$ and $y_3$ has $(D^2 + I)^2$.
+
+\nl Multiplying out the operators results in the following 
+\begin{align*}
+    &D^3 (D^2 + 4D + 13I)(D^2 + I)^2 = 0\\
+    &D^3 (D^2 + 4D + 13I)(D^4 + 2D^2 + I) = 0\\
+    &D^3 (D^6 + 4D^5 + 15D^4 + 8D^3 + 27 D^2 + 4D + 13 I) = 0 \\
+    &D^9 + 4D^8 + 15D^7 + 8D^6 + 27 D^5 + 4D^4 + 13 D^3 = 0 \\
+\end{align*}
+
+Hence, a linear differential equation that satisfies the constaints is $$\boxed{$$y^{(9)} + 4 y^{(8)} + 15 y^{(7)} + 8y^{(6)} + 27 y^{(5)} + 4y^{(4)} + 13 y^{(3)} = 0
+.$$}$$

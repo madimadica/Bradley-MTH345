@@ -1,0 +1,14 @@
+Show that $y_3$ can not be written as a linear combination of $y_1$ and $y_2$. Why does this result not violate the Principle of Superposition?
+
+
+\begin{align*}
+    W(y_1, y_2, y_3) &= {\begin{vmatrix}
+        1 & \sqrt{t} & \sqrt{2t+3} \\
+        0 & \over{2\sqrt{t}}& 1/\sqrt{2t+3}\\
+        0 & -\frac{1}{4t^{3/2}} & -1/(2t+3)^{3/2}
+    \end{vmatrix}}\\
+    &= \over{2\sqrt{t}} \cdot -1/(2t+3)^{3/2} - 1/\sqrt{2t+3} \cdot -\frac{1}{4t^{3/2}} - \sqrt{t} \bigbrac{0} + \sqrt{2t+3}\bigbrac{0}\\
+    &= \over{2\sqrt{t}} \cdot -1/(2t+3)^{3/2} - \over{\sqrt{2t+3}} \cdot -\frac{1}{4t^{3/2}} - \sqrt{t}
+    \\ &\neq 0
+\end{align*}
+Hence they are linearly independent. This doesn't violate the principle because $y_3 \not \in \operatorname{span}\{y_1, y_2\}$

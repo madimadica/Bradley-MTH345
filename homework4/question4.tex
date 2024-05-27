@@ -1,0 +1,45 @@
+Find the general solution (by hand) of the differential equation 
+$$y'' - y = \frac{2}{1+e^x}.$$
+
+\soln First we solve the complementary equation $y'' - y = 0$. This is equivalent to $D^2 - I = 0$, which factors into $(D+I)(D-I)$. Thus the fundamental set is $\{e^{-x}, e^{x}\}$ and $$y_c = c_1 e^{-x} + c_2 e^x.$$
+We want $Ly_p = \dfrac{2}{1+e^x}$ and $y_p = v_1 e^{-x} + v_2 e^{x}$. Therefore 
+$${y_p}' = -v_1 e^{-x} + v_1'e^{-x} + v_2 e^x + v_2'e^x.$$
+Here we assume $v_1'e^{-x} + v_2'e^x = 0$. Hence ${y_p}' = -v_1 e^{-x}  + v_2 e^x$. Therefore
+$${y_p}'' = \underbrace{v_1 e^{-x} + v_2 e^x}_{y_p} - v_1' e^{-x} + v_2'e^x.$$
+It follows that 
+$${y_p}'' - y_p = - v_1' e^{-x} + v_2'e^x = \frac{2}{1+e^x}.$$
+We now have a system of equations,
+\begin{align*}
+    \underbrace{\begin{bmatrix}
+        e^{-x} & e^x \\ -e^{-x} & e^x
+    \end{bmatrix}}_{:= A} \vvec*{v_1'}{v_2'}  &= \vvec*{0}{2/(1+e^x)}
+\end{align*}
+Note that $\det A =  W(e^{-x}, e^x) = 2$ and $A^{-1} = \dfrac{1}{\det A} \bigbrac{ (\operatorname{tr}A)I - A} = \dfrac{1}{2} \displaystyle \begin{bmatrix}
+    e^x & -e^x \\ e^{-x} & e^{-x}
+\end{bmatrix}$
+
+\nl Multiplying by $A^{-1}$ on each side yields
+\begin{align*}
+    \vvec*{v_1'}{v_2'} &= \dfrac{1}{2} \displaystyle \begin{bmatrix}
+        e^x & -e^x \\ e^{-x} & e^{-x}
+    \end{bmatrix}  \vvec*{0}{2/(1+e^x)}\\
+    &= \begin{bmatrix}
+        \dfrac{-e^x}{1+e^x} & \dfrac{e^x}{1+e^x}
+    \end{bmatrix}^T
+    \\ & \\
+    v_1' &= \dfrac{-e^x}{1+e^x} \\
+    \int v_1' \dd x &= - \int \dfrac{e^x}{1+e^x} \dd x\\
+    v_1 &= - \int \frac{\dd u}{u} \tag{Let $u = 1+e^x$}\\
+    v_1 &= -\ln \abs{1+e^x} \\ & \\
+    v_2' &= \dfrac{e^x}{1+e^x} \\
+    v_2 &= \ln \abs{1+e^x}
+\end{align*}
+Substituting these functions into $y_p = v_1 y_1 + v_2 y_2$ yields
+$$y_p = -e^{-x} \ln \abs{1+e^x} + e^x \ln \abs{1+e^x}.$$
+The general solution $y = y_c + y_p$ is 
+$$\boxed{$$y(x) = c_1 e^{-x} + c_2 e^{x} - e^{-x} \ln \abs{1+e^x} + e^x \ln \abs{1+e^x}$$}$$
+% //
+
+
+% \\
+%     \vvec*{0}{2/(1+e^x)} &= 

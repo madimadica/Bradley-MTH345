@@ -1,0 +1,11 @@
+$y'''-y=0$
+
+\soln This is equivalent to $D^3 - D = 0$. Using the difference of cubes formula this can be refactored as $(D-I)(D^2+D+I)$. Applying the quadratic formula to the right-most factor yields the following:
+$$
+\underbrace{(D-I)}_{e^{x}}
+\underbrace{\pars{D-\frac{1+\sqrt{3}}{2}i}\pars{D-\frac{1-\sqrt{3}}{2}i}}_{e^{-x/2} \cos (\sqrt{3}/2), \quad e^{-x/2} \sin (\sqrt{3}/2)}.$$
+Therefore the general solution is 
+\boxed{$$y(x) = c_1 e^x 
++ \dfrac{c_2}{\sqrt{e^x}} \cos \pars{\dfrac{\sqrt{3}}{2}x}
++ \dfrac{c_3}{\sqrt{e^x}} \sin \pars{\dfrac{\sqrt{3}}{2}x}
+.$$}

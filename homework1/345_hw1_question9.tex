@@ -1,0 +1,28 @@
+Solve the ODE $\displaystyle \dv{y}{x} = \frac{y^2 + 2xy}{x^2}$.
+
+\soln By \#6(c) we know that $f(x,y):= \frac{y^2 + 2xy}{x^2}$ is a homogeneous function of degree 0. Given these conditions, we can apply the proposition from \#8 to find
+\begin{align*}
+    &\dv{u}{x} = \over{x} \brac{f(1,u) - u}\\
+    &\dv{u}{x} = \over{x} \brac{u^2 + u}
+\end{align*} 
+Now, using separation of variables yields
+\begin{align*}
+    &\frac{1}{u^2 + u} \dd u = \over{x} \dd x \\
+    &\int \frac{1}{u^2 + u} \dd u = \int \over{x} \dd x \\
+\end{align*}
+Doing partial fractions on the $u$ integrand gives
+$$\frac{1}{u^2 + u} = \frac{1}{u(u+1)} = \frac{A}{u} + \frac{B}{u+1} \iff A(u+1) + Bu = 1 \implies A = 1 \land B= -1.$$
+Hence, 
+\begin{align*}
+    &\int \frac{1}{u} \dd u - \int \frac{1}{u+1} \dd u= \int \over{x} \dd x \\
+    & \ln \abs{u} - \ln \abs{u+1} + C = \ln \abs{x}\\
+    & \exp \Bigbrac{\ln \abs{u} - \ln \abs{u+1} + C} = \exp \Bigbrac{\ln \abs{x}}\\
+    & \frac{Cu}{u+1} = x\\
+    & \frac{Cyx^{-1}}{yx^{-1} + 1} = x \tag{substitution of $u = y/x$}\\
+    & C yx^{-1} = y + x \tag{multiply by $yx^{-1} + 1$} \\
+    & C = \frac{y}{yx^{-1}} + \frac{x}{yx^{-1}} \tag{divide by $yx^{-1}$}\\
+    & C = x + \frac{x^2}{y} \tag{simplify}\\
+    & \frac{x^2}{y} = C - x \\
+    & y = \frac{x^2}{C-x}
+\end{align*}
+So the general solution to the ODE is $y(x) = \dfrac{x^2}{C-x}$.

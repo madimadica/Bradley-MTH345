@@ -1,0 +1,24 @@
+$y'''-3y'' + 3y' - y= 4e^t$
+
+\soln Solving the complementary problem $y_c$ first is $y'''-3y'' + 3y' - y= 0$. Using the binomial theorem this is $(D-1)^3 = 0$ and therefore the fundemental set of $y_c$ is $\{ e^t, te^t, t^2e^t\}$. Since $4e^t$ is a solution to $D-1$ we will use it as an annihilator $A$. 
+\begin{align*}
+    A(D-1)^3 &= A 4e^t\\
+    (D-1)^4 &= 0
+\end{align*}
+Therefore $\{ e^t, te^t, t^2e^t, \underbrace{t^3e^t}_{y_p}\}$ is the fundemental set of $y_a$. Then $y_c = c_1e^t + c_2te^t + c_3t^2 e^t$ and $y_p = c_4 t^3 e^t$. Differentiating $y_p$,
+\begin{align*}
+    y_p &= c_4 t^3 e^t\\
+    y_p' &= 3 c_4 t^2 e^t + c_4 t^3 e^t\\
+    y_p'' &= 6c_4 t e^t + 3c_4 t^2 e^t + 3c_4t^2e^t + c_4 t^3 e^t\\
+        &= 6c_4 t e^t + 6c_4 t^2 e^t + c_4 t^3 e^t\\
+    y_p''' &= 6c_4 t e^t + 6c_4 e^t + 6c_4 t^2 e^t + 12c_4 t e^t + c_4 t^3 e^t + 3c_4 t^2 e^t\\
+    &= 6c_4 e^t + 18c_4 t e^t  + 9c_4 t^2 e^t + c_4 t^3 e^t
+\end{align*}
+Substituting into the original ODE,
+\begin{align*}
+    y'''-3y'' + 3y' - y &= 4e^t\\
+    c_4e^t\brac{\underbrace{\brac{6+ 18t  + 9 t^2 +  t^3 }}_{y'''} - 3 \underbrace{\brac{ 6 t  + 6 t^2  +  t^3  }}_{y''} + 3 \underbrace{\brac{3  t^2  +  t^3 }}_{y'} - \underbrace{\brac{  t^3 }}_{y}} &= 4e^t\\
+    6 c_4e^t &= 4e^t\\
+    c_4 &= \frac23
+\end{align*}
+Therefore $y_p = \dfrac23 t^3 e^t$ and $y = c_1e^t + c_2te^t + c_3t^2 e^t + \dfrac23 t^3 e^t$

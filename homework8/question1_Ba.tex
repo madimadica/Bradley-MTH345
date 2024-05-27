@@ -1,0 +1,15 @@
+The characteristic polynomial is just $\lambda^4 = 0$. Then $(A-\lambda_i I) = A - 0I = A$. Row reducing to find the kernel of $A$ gives
+$$\begin{bmatrix}
+    1&0&0&1& \bigm| & 0\\
+    0&1&-1&0  &\bigm| & 0\\
+    0&0&0&0&\bigm| & 0\\
+    0&0&0&0&\bigm| & 0
+\end{bmatrix}.$$
+Giving the equations $x_1 + x_4 = 0$ and $x_2 - x_3 = 0$. This can give us two eigenvectors $v_1 = \vvec{1}{0}{0}{-1}$ and $v_2 = \vvec{0}{1}{1}{0}$. Next, finding generalized eigenvectors from $\ker{A^2}$ has the row reduction 
+$$\begin{bmatrix}
+    0&1&-1&0& \bigm| & 0\\
+    0&0&0&0&\bigm| & 0 \\
+    0&0&0&0&\bigm| & 0\\
+    0&0&0&0&\bigm| & 0
+\end{bmatrix}.$$
+Part of this kernel ($x_2 - x_3 = 0$) is already in $\ker A$, but now $x_1$ and $x_4$ are free variables, so $e_1$ and $e_4$ could be generalized eigenvectors. But, only one of them can be used since $v_1 \in \Span{e_1, e_4}$. Letting $v_3 \equiv e_1$. Then the next power $A^3 = 0$, so $\ker A^3 = V$, meaning we just need a $v_4 \not \in \Span{v_1, v_2, v_3}$. It follows that $v_4 = e_2$ satisfies this condition.

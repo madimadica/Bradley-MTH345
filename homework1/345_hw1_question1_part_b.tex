@@ -1,0 +1,13 @@
+Find the general solution to the ODE.
+
+\nnl Continuing with the same $M$ and $N$, integrating these gives
+\begin{align*}
+    \int M \dd x &= x + xy^2 + C(y) \text{ and}\\
+    \int N \dd y &= xy^2 + y^2 + C(x).
+\end{align*}
+Since $f(x,y) = \int M \dd x = \int N \dd y$, 
+\begin{align*}
+    & x + xy^2 + C(y) = xy^2 + y^2 + C(x)\\
+    \iff & x + C(y) = y^2 + C(x)
+\end{align*}
+which implies that $C(x) = x$ and $C(y) = y^2$. Hence, the general solution is $f(x,y) = x + xy^2 + y^2 = C$.

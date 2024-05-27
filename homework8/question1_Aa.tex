@@ -1,0 +1,21 @@
+$(A-\lambda I) = 0$ yields $\lambda^3 (\lambda-10) = 0$, so $\lambda_1 = 10$ and $\lambda_2 = \lambda_3 = \lambda_4 = 0$.
+
+\nl For $\lambda_1$, $(A-\lambda_1 I)v_1 = 0$ can be row reduced to 
+$$\begin{bmatrix}
+    1 & 0 & 0 & -0.25 & \bigm| & 0 \\
+    0 & 1 & 0 & -0.50 & \bigm| & 0 \\
+    0 & 0 & 1 & -0.75 & \bigm| & 0 \\
+    0 & 0 & 0 & 0 & \bigm|& 0 \\
+\end{bmatrix}.$$
+
+$x_4$ is a free variable, and letting it equal 4 gives the eigenvector $v_1 = \vvec{1}{2}{3}{4}$.
+
+Then $(A-\lambda_2 I)^3 = 0 = A^3$. Note $A^3 = 100A$. Row reduction leads to 
+$$\begin{bmatrix}
+    1 & 1 & 1 & 1 & \bigm| & 0 \\
+    0 & 0 & 0 & 0 & \bigm|& 0 \\
+    0 & 0 & 0 & 0 & \bigm|& 0 \\
+    0 & 0 & 0 & 0 & \bigm|& 0 \\
+\end{bmatrix}.$$
+
+So $x_2$, $x_3$, and $x_4$ are free variables. The generalized eigenvectors must have the form $x_1 + x_2 + x_3 + x_4 = 0$. Clearly $v_2 = \vvec{1}{-1}{0}{0}$, $v_3 = \vvec{1}{0}{-1}{0}$, and $v_4 = \vvec{1}{0}{0}{-1}$ are linearly independent and in $\ker{A^3}$.

@@ -1,0 +1,20 @@
+Find an integrating factor that converts the ODE into an exact one.
+
+\nnl To find the integrating factor we will use the formula $\displaystyle \mu = \frac{\mu_x N - \mu_y M}{M_y - N_x}$. From part (a) we have $M, N, M_y, \text{ and } N_x$ so we can do some algebra.
+\begin{align*}
+    \mu &= \frac{\mu_x N - \mu_y M}{M_y - N_x}\\
+    &= \frac{\mu_x (3x^2-y^2) - \mu_y (-2xy)}{-2x - 6x} \tag{substition} \\
+    &= \frac{\mu_x (3x^2-y^2)}{-8x} - \frac{\mu_y 2xy}{8x} \tag{linearity}\\
+    &= \frac{\mu_x (3x^2-y^2)}{-8x} - \frac{\mu_y y}{4} \tag{like terms}
+\end{align*}
+From here, we can apply case 2 of integrating factors and let $\mu$ be a function solely in terms of $y$. Consequently, $\mu_x = 0$, so $\mu = \dfrac{-\mu_y y}{4} = \displaystyle \frac{-y}{4}\dv{\mu}{y}$. Now we do some basic calculus to finish finding $\mu$. 
+\begin{align*}
+    & \quad \mu = \frac{-y}{4}\dv{\mu}{y}\\
+    \iff & \quad \frac{1}{y} = \frac{-1}{4 \mu} \dv{\mu}{y} \tag{divide by $\mu y$}\\
+    \iff & \quad \frac{1}{y} \dd y = \frac{-1}{4 \mu} \dd{\mu} \tag{multiply by $\dd y$}\\
+    \iff & \quad \int \frac{1}{y} \dd y = \int \frac{-1}{4 \mu} \dd{\mu} \\
+    \iff & \quad \ln \abs{y} + C = \frac{-1}{4} \ln \abs{\mu}\\
+    \iff & \quad \ln \abs{\mu} = -4 \ln \abs{y} = \ln \abs{y^{-4}}\\
+    \iff & \quad \mu = y^{-4} + C \tag{$e$ of both sides}
+\end{align*}
+Letting $C = 0$ gives us a single integrating factor of $\mu = y^{-4}$.
